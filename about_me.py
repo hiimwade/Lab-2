@@ -49,7 +49,7 @@ def main():
     # TODO: Change to pizza toppings you like
     add_pizza_toppings(about_me, ['pepper', 'onion'])
     print_pizza_toppings(about_me)
-    about_me['pizza toppings'].extend['pepper', 'onion'].sort()
+    about_me['pizza toppings'].extend(['pepper', 'onion'])
 
     # Step 6: Add another movie to the data structure
     # TODO: Change to a movie you like
@@ -83,6 +83,14 @@ def print_pizza_toppings(my_info):
     Args:
         my_info (dict): Data structure containing information about me
     """
+    print_pizza_toppings(my_info,)
+    for pizza_toppings in my_info['pizza toppings']:
+        print(f"*{pizza_toppings}")
+
+
+
+
+
     # TODO: Complete function body per Step 4
     # Print header "My favourite pizza toppings are:"
     # Print bullet list of favourite pizza toppings
@@ -96,6 +104,9 @@ def add_pizza_toppings(my_info, toppings):
         my_info (dict): Data structure containing information about me
         toppings (list): List of pizza toppings
     """
+    my_info['pizza toppings'].extend([toppings])
+
+
     
     # TODO: Complete function body per Step 5
     # Append new pizza toppings to end of list 
@@ -111,6 +122,7 @@ def add_movie(my_info, title, genre):
         title (str): Movie title
         genre (str): Movie genre
     """
+    my_info['movies'].append([title],[genre])
     # TODO: Complete function body per Step 6
     # Create dictionary for new movie and add to movie list
     return
