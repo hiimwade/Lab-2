@@ -8,33 +8,57 @@ Usage:
 def main():
     # Step 2: Create a complex data structure that holds information about me
     about_me = {
-        # TODO: Put full name into data structure
-        # TODO: Put student ID into data structure
-        # TODO: Put list of 3 pizza toppings into data structure
+        'name': 'Wade Manley',
+        'student id': 65160657,
+        'pizza toppings': [
+            'SAUSAGE',
+            'PEPPERONI',
+            'BACON'
+
+        ],
+        
         'movies': [
-            # TODO: Change this to a movie you like
+            
             {
-                'title': 'The empire strikes back',
-                'genre': 'sci-fi'
+                'title': 'law abiding citizen',
+                'genre': 'action'
             },
-            # TODO: Add one more movie
+            
+            {
+                'title': 'underworld',
+                'genre': 'action'
+            }
+
         ]
     }
 
-    # Step 3: Print student name and ID
     print_student_name_and_id(about_me)
+    print(f"My name is {about_me['name']}, but you can call me Sir {about_me['name'].split()[0]}")
+    print (f"My student ID is {about_me['student id']}")
 
     # Step 4: Print a bullet list of pizza toppings
-    print_pizza_toppings(about_me)
+    print_pizza_toppings(about_me,)
+    for pizza_toppings in about_me['pizza toppings']:
+        print(f"*{pizza_toppings}")
+
+
+
+    
 
     # Step 5: Add pizza toppings to the data structure
     # TODO: Change to pizza toppings you like
-    add_pizza_toppings(about_me, ['soylent green', 'racht'])
+    add_pizza_toppings(about_me, ['pepper', 'onion'])
     print_pizza_toppings(about_me)
+    about_me['pizza toppings'].extend['pepper', 'onion'].sort()
 
     # Step 6: Add another movie to the data structure
     # TODO: Change to a movie you like
-    add_movie(about_me, 'the lord of the rings', 'fantasy')
+    add_movie(about_me, 'Saw', 'horror')
+    about_me['movies'].append(['title:Saw'],['genre:horror'])
+
+
+
+
 
     # Step 7: Print a comma-separated list of movie genres
     print_movie_genres(about_me)
@@ -66,11 +90,13 @@ def print_pizza_toppings(my_info):
 
 def add_pizza_toppings(my_info, toppings):
     """Adds some pizza toppings to the list of favourites
+    
 
     Args:
         my_info (dict): Data structure containing information about me
         toppings (list): List of pizza toppings
     """
+    
     # TODO: Complete function body per Step 5
     # Append new pizza toppings to end of list 
     # Convert all pizza toppings to lowercase
